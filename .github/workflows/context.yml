@@ -6,5 +6,11 @@ jobs:
   print-context:
     runs-on: ubuntu-latest
     steps:
-      - name: Printing github context
+      - name: Printing `github` context
         run: echo "${{ toJSON(github) }}"
+      - name: Printing `runner` context
+        run: echo "${{ toJSON(runner) }}"
+      - name: Printing `env` context
+        run: echo "${{ toJSON(env) }}"
+      - name: Printing `vars` context
+        run: echo "${{ toJSON(vars) }}"
