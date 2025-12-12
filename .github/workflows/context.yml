@@ -2,15 +2,22 @@ name: Context
 
 on: workflow_dispatch
 
+env:
+  WRK_FLW_LVL_ENV: "Workflow level ENV"
+
 jobs:
   print-context:
     runs-on: ubuntu-latest
+    env:
+      JB_LVL_ENV: "Job level ENV"
     steps:
       - name: Printing `github` context
         run: echo "${{ toJSON(github) }}"
       - name: Printing `runner` context
         run: echo "${{ toJSON(runner) }}"
       - name: Printing `env` context
+        env:
+          STP_LVL_ENV: "Step level ENV"
         run: echo "${{ toJSON(env) }}"
       - name: Printing `vars` context
         run: echo "${{ toJSON(vars) }}"
