@@ -16,5 +16,3 @@ jobs:
         run: echo "${{ toJSON(vars) }}"
       - name: Printing `secrets` context
         run: echo "${{ toJSON(secrets) }}"
-      - name: Printing `jobs` context
-        run: echo "${{ toJSON(jobs) }}"
