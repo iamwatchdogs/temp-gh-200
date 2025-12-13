@@ -1,0 +1,10 @@
+name: Logging
+
+on: workflow_dispatch
+
+jobs:
+  print-context:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Printing debug message
+        run: echo "::debug::This is a sample debug message"
