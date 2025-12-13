@@ -6,5 +6,6 @@ jobs:
   print-context:
     runs-on: ubuntu-latest
     steps:
+      - run: echo "ACTIONS_STEP_DEBUG:- $ACTIONS_STEP_DEBUG"
       - name: Printing debug message
         run: echo "::debug::This is a sample debug message"
